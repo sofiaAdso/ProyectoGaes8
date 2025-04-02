@@ -1,0 +1,196 @@
+/* Estilos específicos para la página de ejercicios */
+
+.exercises-hero {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.exercises-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.exercises-hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.exercises-content {
+    padding: 4rem 0;
+}
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+.exercises-sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-filter {
+    list-style: none;
+}
+
+.category-filter button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-filter button:hover,
+.category-filter button.active {
+    background-color: #f0f0f0;
+}
+
+.exercises-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.exercise-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-icon {
+    background-color: #ffd700;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-icon i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.exercise-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.exercise-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.exercise-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.exercise-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.exercise-meta span {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.exercise-meta i {
+    margin-right: 0.25rem;
+}
+
+.practice-tools {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+}
+
+.practice-tools h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card i {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.tool-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .exercises-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercises-sidebar {
+        margin-bottom: 2rem;
+    }
+
+    .category-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .category-filter button {
+        width: auto;
+    }
+
+    .exercise-card {
+        flex-direction: column;
+    }
+
+    .exercise-icon {
+        padding: 1rem;
+    }
+}
+

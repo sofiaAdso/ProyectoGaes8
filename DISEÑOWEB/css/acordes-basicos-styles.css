@@ -1,0 +1,143 @@
+/* Estilos específicos para la página de acordes básicos */
+
+.acordes-hero {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.acordes-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.acordes-hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.acordes-content {
+    padding: 4rem 0;
+}
+
+.acordes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.acordes-list h2,
+.acorde-detail h2,
+.practica-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.acorde-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.acorde-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.acorde-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.acorde-diagram {
+    width: 100%;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.acorde-detail {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#acorde-info,
+#acorde-audio,
+#acorde-tips {
+    margin-bottom: 1.5rem;
+}
+
+.practica-section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.practica-acordes {
+    margin-top: 2rem;
+}
+
+#practice-display {
+    margin-top: 2rem;
+}
+
+#practice-display.hidden {
+    display: none;
+}
+
+#current-chord {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+#next-chord,
+#timer {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #ffd700;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .acordes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acordes-hero h1 {
+        font-size: 2rem;
+    }
+
+    .acordes-hero p {
+        font-size: 1rem;
+    }
+
+    .acordes-list h2,
+    .acorde-detail h2,
+    .practica-section h2 {
+        font-size: 1.5rem;
+    }
+}

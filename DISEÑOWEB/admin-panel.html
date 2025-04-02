@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Guitar Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="admin-panel">
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i data-lucide="guitar" class="sidebar-icon"></i>
+                <h1>Menu</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#usuarios" class="nav-item active" data-section="usuarios">
+                    <i data-lucide="users" class="nav-icon"></i>
+                    Usuarios
+                </a>
+                <a href="#lecciones" class="nav-item" data-section="lecciones">
+                    <i data-lucide="book-open" class="nav-icon"></i>
+                    Lecciones
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Usuarios Section -->
+            <section id="usuarios" class="content-section active">
+                <div class="section-header">
+                    <h2>Gestión de Usuarios</h2>
+                    <button class="btn btn-primary" onclick="showModal('userModal')">
+                        <i data-lucide="plus"></i> Agregar Usuario
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo</th>
+                                <th>Rol</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Datos de ejemplo -->
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan@example.com</td>
+                                <td>Estudiante</td>
+                                <td class="actions">
+                                    <button class="btn-icon" onclick="editUser(1)">
+                                        <i data-lucide="edit"></i>
+                                    </button>
+                                    <button class="btn-icon" onclick="deleteUser(1)">
+                                        <i data-lucide="trash-2"></i>
+                                    </button>
+                                    <button class="btn-icon" onclick="showUserReport(1)">
+                                        <i data-lucide="file-text"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Lecciones Section -->
+            <section id="lecciones" class="content-section">
+                <div class="section-header">
+                    <h2>Gestión de Lecciones</h2>
+                    <button class="btn btn-primary" onclick="showModal('lessonModal')">
+                        <i data-lucide="plus"></i> Agregar Lección
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Instrumento</th>
+                                <th>Dificultad</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lessonsTableBody">
+                            <!-- Datos de ejemplo -->
+                            <tr>
+                                <td>1</td>
+                                <td>Acordes básicos</td>
+                                <td>Guitarra</td>
+                                <td>Principiante</td>
+                                <td class="actions">
+                                    <button class="btn-icon" onclick="editLesson(1)">
+                                        <i data-lucide="edit"></i>
+                                    </button>
+                                    <button class="btn-icon" onclick="deleteLesson(1)">
+                                        <i data-lucide="trash-2"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Usuario -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar Usuario</h3>
+                <button class="close-btn" onclick="hideModal('userModal')">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <form id="userForm" class="admin-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" required>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="profesor">Profesor</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hideModal('userModal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Lección -->
+    <div id="lessonModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar Lección</h3>
+                <button class="close-btn" onclick="hideModal('lessonModal')">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <form id="lessonForm" class="admin-form">
+                <div class="form-group">
+                    <label for="instrumento">Instrumento</label>
+                    <select id="instrumento" name="instrumento" required>
+                        <option value="guitarra">Guitarra</option>
+                        <option value="bajo">Bajo</option>
+                        <option value="ukulele">Ukulele</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dificultad">Dificultad</label>
+                    <select id="dificultad" name="dificultad" required>
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nombreLeccion">Nombre de la Lección</label>
+                    <input type="text" id="nombreLeccion" name="nombreLeccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tablatura">Tablatura</label>
+                    <textarea id="tablatura" name="tablatura" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="video">URL del Video</label>
+                    <input type="url" id="video" name="video" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hideModal('lessonModal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/admin-script.js"></script>
+</body>
+</html>
+

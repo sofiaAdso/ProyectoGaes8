@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones - GuitarMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/canciones-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i data-lucide="guitar"></i>
+                    <span>GuitarMaster</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="lecciones.html" class="dropdown-trigger">Lecciones</a></li>
+                    <li><a href="ejercicios.html" class="dropdown-trigger">Ejercicios</a></li>
+                    <li><a href="canciones.html" class="dropdown-trigger active">Canciones</a></li>
+                    <li><a href="#" class="dropdown-trigger">Herramientas</a></li>
+                </ul>
+                <button class="user-button">
+                    <i data-lucide="user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="songs-hero">
+            <div class="container">
+                <h1>Biblioteca de Canciones</h1>
+                <p>Aprende y toca tus canciones favoritas con nuestras guías interactivas</p>
+            </div>
+        </section>
+
+        <section class="songs-content">
+            <div class="container">
+                <div class="songs-grid">
+                    <aside class="songs-sidebar">
+                        <h2>Filtros</h2>
+                        <div class="filter-group">
+                            <h3>Género</h3>
+                            <ul class="genre-filter">
+                                <li><button class="active" data-genre="all">Todos</button></li>
+                                <li><button data-genre="rock">Rock</button></li>
+                                <li><button data-genre="pop">Pop</button></li>
+                                <li><button data-genre="folk">Folk</button></li>
+                                <li><button data-genre="blues">Blues</button></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Dificultad</h3>
+                            <ul class="difficulty-filter">
+                                <li><button class="active" data-difficulty="all">Todas</button></li>
+                                <li><button data-difficulty="principiante">Principiante</button></li>
+                                <li><button data-difficulty="intermedio">Intermedio</button></li>
+                                <li><button data-difficulty="avanzado">Avanzado</button></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <div class="songs-list">
+                        <div class="song-card" data-genre="rock" data-difficulty="principiante">
+                            <img src="https://via.placeholder.com/300x300" alt="Wonderwall - Oasis" class="song-image">
+                            <div class="song-info">
+                                <h3>Wonderwall</h3>
+                                <p>Oasis</p>
+                                <div class="song-meta">
+                                    <span><i data-lucide="music"></i> Rock</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Principiante</span>
+                                </div>
+                                <button class="btn btn-primary start-song">Aprender</button>
+                            </div>
+                        </div>
+                        <div class="song-card" data-genre="pop" data-difficulty="intermedio">
+                            <img src="https://via.placeholder.com/300x300" alt="Shape of You - Ed Sheeran" class="song-image">
+                            <div class="song-info">
+                                <h3>Shape of You</h3>
+                                <p>Ed Sheeran</p>
+                                <div class="song-meta">
+                                    <span><i data-lucide="music"></i> Pop</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Intermedio</span>
+                                </div>
+                                <button class="btn btn-primary start-song">Aprender</button>
+                            </div>
+                        </div>
+                        <div class="song-card" data-genre="folk" data-difficulty="principiante">
+                            <img src="https://via.placeholder.com/300x300" alt="Blowin' in the Wind - Bob Dylan" class="song-image">
+                            <div class="song-info">
+                                <h3>Blowin' in the Wind</h3>
+                                <p>Bob Dylan</p>
+                                <div class="song-meta">
+                                    <span><i data-lucide="music"></i> Folk</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Principiante</span>
+                                </div>
+                                <button class="btn btn-primary start-song">Aprender</button>
+                            </div>
+                        </div>
+                        <div class="song-card" data-genre="blues" data-difficulty="avanzado">
+                            <img src="https://via.placeholder.com/300x300" alt="Sweet Home Chicago - Robert Johnson" class="song-image">
+                            <div class="song-info">
+                                <h3>Sweet Home Chicago</h3>
+                                <p>Robert Johnson</p>
+                                <div class="song-meta">
+                                    <span><i data-lucide="music"></i> Blues</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Avanzado</span>
+                                </div>
+                                <button class="btn btn-primary start-song">Aprender</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="song-features">
+            <div class="container">
+                <h2>Características de nuestras lecciones de canciones</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="play-circle"></i>
+                        <h3>Video tutorial</h3>
+                        <p>Aprende con videos paso a paso</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="file-text"></i>
+                        <h3>Tablaturas interactivas</h3>
+                        <p>Sigue la tablatura mientras escuchas</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="sliders"></i>
+                        <h3>Control de velocidad</h3>
+                        <p>Practica a tu propio ritmo</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="repeat"></i>
+                        <h3>Secciones en bucle</h3>
+                        <p>Repite partes difíciles fácilmente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i data-lucide="guitar"></i>
+                        <span>Guitar Master</span>
+                    </a>
+                    <p>Aprende a tocar guitarra de manera fácil y divertida con nuestras lecciones interactivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="lecciones.html">Lecciones</a></li>
+                        <li><a href="ejercicios.html">Ejercicios</a></li>
+                        <li><a href="canciones.html">Canciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Guitar Master. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/canciones-script.js"></script>
+</body>
+</html>
+

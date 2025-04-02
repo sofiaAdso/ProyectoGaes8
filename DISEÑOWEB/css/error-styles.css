@@ -1,0 +1,79 @@
+/* Estilos específicos para las páginas de error */
+
+.error-section {
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+    min-height: calc(100vh - 64px - 300px); /* Ajusta esto según la altura de tu header y footer */
+    display: flex;
+    align-items: center;
+}
+
+.error-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error-content {
+    max-width: 500px;
+}
+
+.error-content h1 {
+    font-size: 6rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.error-content p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.error-image {
+    max-width: 300px;
+}
+
+.error-image img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .error-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .error-content {
+        margin-bottom: 2rem;
+    }
+
+    .error-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
