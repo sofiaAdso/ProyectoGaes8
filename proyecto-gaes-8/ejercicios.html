@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios - GuitarMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ejercicios-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i data-lucide="guitar"></i>
+                    <span>GuitarMaster</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="lecciones.html">Lecciones</a></li>
+                    <li><a href="ejercicios.html" class="active">Ejercicios</a></li>
+                    <li><a href="canciones.html">Canciones</a></li>
+                    <li><a href="metronomo.html">Herramientas</a></li>
+                </ul>
+                <button class="user-button">
+                    <i data-lucide="user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="exercises-hero">
+            <div class="container">
+                <h1>Ejercicios de Guitarra</h1>
+                <p>Mejora tu técnica y habilidades con nuestros ejercicios prácticos</p>
+            </div>
+        </section>
+
+        <section class="exercises-content">
+            <div class="container">
+                <div class="exercises-grid">
+                    <aside class="exercises-sidebar">
+                        <h2>Categorías</h2>
+                        <ul class="category-filter">
+                            <li><button class="active" data-category="all">Todos</button></li>
+                            <li><button data-category="tecnica">Técnica</button></li>
+                            <li><button data-category="ritmo">Ritmo</button></li>
+                            <li><button data-category="acordes">Acordes</button></li>
+                            <li><button data-category="escalas">Escalas</button></li>
+                        </ul>
+                    </aside>
+                    <div class="exercises-list">
+                        <div class="exercise-card" data-category="tecnica">
+                            <div class="exercise-icon">
+                                <i data-lucide="hand-metal"></i>
+                            </div>
+                            <div class="exercise-info">
+                                <h3>Ejercicio de dedos</h3>
+                                <p>Mejora la agilidad y fuerza de tus dedos con este ejercicio de calentamiento.</p>
+                                <div class="exercise-meta">
+                                    <span><i data-lucide="clock"></i> 5 minutos</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Principiante</span>
+                                </div>
+                                <button class="btn btn-primary start-exercise">Comenzar</button>
+                            </div>
+                        </div>
+                        <div class="exercise-card" data-category="ritmo">
+                            <div class="exercise-icon">
+                                <i data-lucide="music"></i>
+                            </div>
+                            <div class="exercise-info">
+                                <h3>Patrón de rasgueo básico</h3>
+                                <p>Practica un patrón de rasgueo simple para mejorar tu sentido del ritmo.</p>
+                                <div class="exercise-meta">
+                                    <span><i data-lucide="clock"></i> 10 minutos</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Principiante</span>
+                                </div>
+                                <a href="ejercicio-rasgueo.html" class="btn btn-primary start-exercise">Comenzar</a>
+                            </div>
+                        </div>
+                        <div class="exercise-card" data-category="acordes">
+                            <div class="exercise-icon">
+                                <i data-lucide="layers"></i>
+                            </div>
+                            <div class="exercise-info">
+                                <h3>Transiciones de acordes</h3>
+                                <p>Practica cambios suaves entre acordes comunes.</p>
+                                <div class="exercise-meta">
+                                    <span><i data-lucide="clock"></i> 15 minutos</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Intermedio</span>
+                                </div>
+                                <button class="btn btn-primary start-exercise">Comenzar</button>
+                            </div>
+                        </div>
+                        <div class="exercise-card" data-category="escalas">
+                            <div class="exercise-icon">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+                            <div class="exercise-info">
+                                <h3>Escala pentatónica</h3>
+                                <p>Aprende y practica la escala pentatónica en diferentes posiciones del mástil.</p>
+                                <div class="exercise-meta">
+                                    <span><i data-lucide="clock"></i> 20 minutos</span>
+                                    <span><i data-lucide="bar-chart-2"></i> Intermedio</span>
+                                </div>
+                                <button class="btn btn-primary start-exercise">Comenzar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="practice-tools">
+            <div class="container">
+                <h2>Herramientas de práctica</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i data-lucide="clock"></i>
+                        <h3>Metrónomo</h3>
+                        <p>Practica con precisión rítmica</p>
+                        <a href="metronomo.html" class="btn btn-secondary">Abrir</a>
+                    </div>
+                    <div class="tool-card">
+                        <i data-lucide="mic"></i>
+                        <h3>Afinador</h3>
+                        <p>Mantén tu guitarra afinada</p>
+                        <button class="btn btn-secondary">Abrir</button>
+                    </div>
+                    <div class="tool-card">
+                        <i data-lucide="video"></i>
+                        <h3>Grabadora</h3>
+                        <p>Graba y analiza tu práctica</p>
+                        <button class="btn btn-secondary">Abrir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i data-lucide="guitar"></i>
+                        <span>Guitar Master</span>
+                    </a>
+                    <p>Aprende a tocar guitarra de manera fácil y divertida con nuestras lecciones interactivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="lecciones.html">Lecciones</a></li>
+                        <li><a href="ejercicios.html">Ejercicios</a></li>
+                        <li><a href="#">Canciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Guitar Master. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/ejercicios-script.js"></script>
+</body>
+</html>
+

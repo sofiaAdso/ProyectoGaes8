@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil - Guitar Master</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/validacion-styles.css">
+  <link rel="stylesheet" href="css/form-styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+      <!-- Aquí va tu header existente -->
+      <div class="logo">
+          <i data-lucide="guitar"></i>
+          <span>Guitar Master</span>
+      </div>
+      <nav class="main-nav">
+          <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="lecciones.html">Lecciones</a></li>
+              <li><a href="ejercicios.html">Ejercicios</a></li>
+              <li><a href="canciones.html">Canciones</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              
+              <!-- Menú para usuarios no autenticados -->
+              <li class="user-menu" id="guest-menu">
+                  <a href="login.html">Iniciar sesión</a>
+                  <a href="registro.html">Registrarse</a>
+              </li>
+              
+              <!-- Menú para usuarios autenticados -->
+              <li class="user-menu" id="user-menu" style="display: none;">
+                  <a href="#" id="user-dropdown">Mi cuenta</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="perfil.html">Mi perfil</a></li>
+                      <li><a href="editar-perfil.html" class="active">Editar perfil</a></li>
+                      <li><a href="cambiar-password.html">Cambiar contraseña</a></li>
+                      <li><a href="logout.php">Cerrar sesión</a></li>
+                  </ul>
+              </li>
+              
+              <!-- Menú para administradores -->
+              <li class="admin-menu" id="admin-menu" style="display: none;">
+                  <a href="admin-panel.html">Panel de administración</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+
+  <main class="container">
+      <div class="page-header">
+          <h1>Editar Perfil</h1>
+          <p class="subtitle">Actualiza tu información personal.</p>
+      </div>
+
+      <div class="form-container">
+          <h2 class="form-title">Información de perfil</h2>
+          <form id="editar-perfil-form" class="form" enctype="multipart/form-data">
+              <div class="form-row">
+                  <div class="form-group form-col">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" id="nombre" name="nombre" required>
+                      <span id="nombre-error" class="error-message"></span>
+                  </div>
+
+                  <div class="form-group form-col">
+                      <label for="email">Correo electrónico</label>
+                      <input type="email" id="email" name="email" required>
+                      <span id="email-error" class="error-message"></span>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="biografia">Biografía</label>
+                  <textarea id="biografia" name="biografia" rows="4"></textarea>
+                  <span id="biografia-error" class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                  <label for="avatar">Foto de perfil</label>
+                  <input type="file" id="avatar" name="avatar" accept=".jpg,.jpeg,.png,.gif">
+                  <span id="avatar-error" class="error-message"></span>
+                  <div id="avatar-preview" class="avatar-preview"></div>
+              </div>
+
+              <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                  <a href="perfil.html" class="btn btn-secondary">Cancelar</a>
+              </div>
+          </form>
+      </div>
+  </main>
+
+  <footer>
+      <!-- Aquí va tu footer existente -->
+      <div class="footer-content">
+          <div class="footer-logo">
+              <i data-lucide="guitar"></i>
+              <span>Guitar Master</span>
+          </div>
+          <div class="footer-links">
+              <h3>Enlaces rápidos</h3>
+              <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="lecciones.html">Lecciones</a></li>
+                  <li><a href="ejercicios.html">Ejercicios</a></li>
+                  <li><a href="canciones.html">Canciones</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+          </div>
+          <div class="footer-social">
+              <h3>Síguenos</h3>
+              <div class="social-icons">
+                  <a href="#"><i data-lucide="facebook"></i></a>
+                  <a href="#"><i data-lucide="instagram"></i></a>
+                  <a href="#"><i data-lucide="youtube"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2023 Guitar Master. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/editar-perfil.js"></script>
+</body>
+</html>
+

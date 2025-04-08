@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comenzar Ahora - Guitar Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/comenzar-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i data-lucide="guitar"></i>
+                    <span>Guitar Master</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="lecciones.html">Lecciones</a></li>
+                    <li><a href="ejercicios.html">Ejercicios</a></li>
+                    <li><a href="canciones.html">Canciones</a></li>
+                    <li><a href="#" class="active">Comenzar</a></li>
+                </ul>
+                <button class="user-button">
+                    <i data-lucide="user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="comenzar-hero">
+            <div class="container">
+                <h1>Comienza tu viaje musical</h1>
+                <p>Bienvenido a Guitar Master. Aquí encontrarás todo lo que necesitas para empezar a tocar la guitarra.</p>
+            </div>
+        </section>
+
+        <section class="comenzar-content">
+            <div class="container">
+                <div class="comenzar-grid">
+                    <div class="comenzar-steps">
+                        <h2>Primeros pasos</h2>
+                        <ol class="steps-list">
+                            <li>
+                                <h3>Configura tu perfil</h3>
+                                <p>Personaliza tu experiencia de aprendizaje.</p>
+                            </li>
+                            <li>
+                                <h3>Elige tu nivel</h3>
+                                <p>Desde principiante hasta avanzado, tenemos lecciones para ti.</p>
+                            </li>
+                            <li>
+                                <h3>Explora las lecciones</h3>
+                                <p>Comienza con nuestras lecciones estructuradas.</p>
+                            </li>
+                            <li>
+                                <h3>Practica con ejercicios</h3>
+                                <p>Refuerza lo aprendido con ejercicios prácticos.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="profile-setup">
+                        <h2>Configura tu perfil</h2>
+                        <form id="profile-form" class="profile-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nivel">Nivel de experiencia</label>
+                                <select id="nivel" name="nivel" required>
+                                    <option value="">Selecciona tu nivel</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="objetivo">Objetivo principal</label>
+                                <textarea id="objetivo" name="objetivo" rows="3" placeholder="¿Qué te gustaría lograr con la guitarra?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar perfil</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="recursos-recomendados">
+                    <h2>Recursos recomendados</h2>
+                    <div class="recursos-grid">
+                        <div class="recurso-card">
+                            <i data-lucide="book-open"></i>
+                            <h3>Guía de acordes básicos</h3>
+                            <p>Aprende los acordes fundamentales para empezar a tocar canciones.</p>
+                            <a href="#" class="btn btn-secondary">Ver guía</a>
+                        </div>
+                        <div class="recurso-card">
+                            <i data-lucide="video"></i>
+                            <h3>Video: Cómo afinar tu guitarra</h3>
+                            <p>Tutorial paso a paso para afinar tu guitarra correctamente.</p>
+                            <a href="#" class="btn btn-secondary">Ver video</a>
+                        </div>
+                        <div class="recurso-card">
+                            <i data-lucide="music"></i>
+                            <h3>Playlist: Canciones para principiantes</h3>
+                            <p>Una selección de canciones fáciles para practicar.</p>
+                            <a href="#" class="btn btn-secondary">Explorar playlist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i data-lucide="guitar"></i>
+                        <span>Guitar Master</span>
+                    </a>
+                    <p>Aprende a tocar guitarra de manera fácil y divertida con nuestras lecciones interactivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="lecciones.html">Lecciones</a></li>
+                        <li><a href="ejercicios.html">Ejercicios</a></li>
+                        <li><a href="canciones.html">Canciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Guitar Master. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/comenzar-script.js"></script>
+</body>
+</html>

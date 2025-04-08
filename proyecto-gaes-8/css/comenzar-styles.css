@@ -1,0 +1,198 @@
+/* Estilos específicos para la página de comenzar */
+
+.comenzar-hero {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.comenzar-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.comenzar-hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.comenzar-content {
+    padding: 4rem 0;
+}
+
+.comenzar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.comenzar-steps h2,
+.profile-setup h2,
+.recursos-recomendados h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.steps-list {
+    list-style-type: none;
+    counter-reset: steps-counter;
+    padding-left: 0;
+}
+
+.steps-list li {
+    counter-increment: steps-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.steps-list li::before {
+    content: counter(steps-counter);
+    background-color: #ffd700;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.steps-list h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.steps-list p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.profile-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #ffd700;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+}
+
+.recursos-recomendados {
+    margin-top: 4rem;
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.recurso-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recurso-card:hover {
+    transform: translateY(-5px);
+}
+
+.recurso-card i {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.recurso-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.recurso-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .comenzar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recursos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comenzar-hero h1 {
+        font-size: 2rem;
+    }
+
+    .comenzar-hero p {
+        font-size: 1rem;
+    }
+
+    .comenzar-steps h2,
+    .profile-setup h2,
+    .recursos-recomendados h2 {
+        font-size: 1.5rem;
+    }
+}

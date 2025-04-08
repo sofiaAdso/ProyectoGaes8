@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Canciones - Guitar Master</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/validacion-styles.css">
+  <link rel="stylesheet" href="../css/form-styles.css">
+  <link rel="stylesheet" href="../css/admin-styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+      <!-- Aquí va tu header de admin existente -->
+      <div class="logo">
+          <img src="../img/logo.png" alt="Guitar Master Logo">
+      </div>
+      <nav class="admin-nav">
+          <ul>
+              <li><a href="../admin-panel.html">Panel principal</a></li>
+              <li><a href="lecciones.html">Lecciones</a></li>
+              <li><a href="ejercicios.html">Ejercicios</a></li>
+              <li><a href="canciones.html" class="active">Canciones</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="mensajes.html">Mensajes</a></li>
+              <li><a href="../index.html">Ver sitio</a></li>
+              <li><a href="../logout.php">Cerrar sesión</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main class="admin-container">
+      <div class="admin-header">
+          <h1>Administrar Canciones</h1>
+          <a href="cancion-form.html" class="btn btn-primary">
+              <i data-lucide="plus-circle"></i> Nueva canción
+          </a>
+      </div>
+
+      <div class="admin-section">
+          <h2>Canciones disponibles</h2>
+          
+          <table id="tabla-canciones" class="admin-table">
+              <thead>
+                  <tr>
+                      <th>Título</th>
+                      <th>Artista</th>
+                      <th>Nivel</th>
+                      <th>Autor</th>
+                      <th>Fecha</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Las canciones se cargarán dinámicamente aquí -->
+                  <tr>
+                      <td colspan="6" class="text-center">Cargando canciones...</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </main>
+
+  <footer>
+      <!-- Aquí va tu footer -->
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="../img/logo.png" alt="Guitar Master Logo">
+          </div>
+          <div class="footer-admin">
+              <p>Panel de administración - Guitar Master</p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2023 Guitar Master. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/admin-canciones.js"></script>
+</body>
+</html>
+

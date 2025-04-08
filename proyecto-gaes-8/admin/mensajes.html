@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensajes de Contacto - Guitar Master</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/validacion-styles.css">
+<link rel="stylesheet" href="../css/form-styles.css">
+<link rel="stylesheet" href="../css/admin-styles.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  /* Estilos específicos para mensajes */
+  .mensaje-no-leido {
+    font-weight: bold;
+    background-color: #f8f9fa;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mensaje-contenido {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+<header>
+    <!-- Aquí va tu header de admin existente -->
+    <div class="logo">
+        <img src="../img/logo.png" alt="Guitar Master Logo">
+    </div>
+    <nav class="admin-nav">
+        <ul>
+            <li><a href="../admin-panel.html">Panel principal</a></li>
+            <li><a href="lecciones.html">Lecciones</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="canciones.html">Canciones</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="mensajes.html" class="active">Mensajes</a></li>
+            <li><a href="../index.html">Ver sitio</a></li>
+            <li><a href="../logout.php">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="admin-container">
+    <div class="admin-header">
+        <h1>Mensajes de Contacto</h1>
+    </div>
+
+    <div class="admin-section">
+        <h2>Bandeja de entrada</h2>
+        
+        <table id="tabla-mensajes" class="admin-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Asunto</th>
+                    <th>Fecha</th>
+                    <th>Leído</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los mensajes se cargarán dinámicamente aquí -->
+                <tr>
+                    <td colspan="6" class="text-center">Cargando mensajes...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <!-- Aquí va tu footer -->
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="../img/logo.png" alt="Guitar Master Logo">
+        </div>
+        <div class="footer-admin">
+            <p>Panel de administración - Guitar Master</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Guitar Master. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/admin-mensajes.js"></script>
+</body>
+</html>
+

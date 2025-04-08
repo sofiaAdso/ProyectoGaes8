@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrar Canción - Guitar Master</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/validacion-styles.css">
+<link rel="stylesheet" href="../css/form-styles.css">
+<link rel="stylesheet" href="../css/admin-styles.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<header>
+    <!-- Aquí va tu header de admin existente -->
+    <div class="logo">
+        <img src="../img/logo.png" alt="Guitar Master Logo">
+    </div>
+    <nav class="admin-nav">
+        <ul>
+            <li><a href="../admin-panel.html">Panel principal</a></li>
+            <li><a href="lecciones.html">Lecciones</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="canciones.html" class="active">Canciones</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="mensajes.html">Mensajes</a></li>
+            <li><a href="../index.html">Ver sitio</a></li>
+            <li><a href="../logout.php">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="admin-container">
+    <div class="admin-header">
+        <h1 id="form-title">Nueva Canción</h1>
+        <a href="../admin-panel.html" class="btn btn-secondary">Volver al panel</a>
+    </div>
+
+    <div class="form-container">
+        <form id="cancion-form" class="form" enctype="multipart/form-data">
+            <input type="hidden" id="id" name="id" value="0">
+
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <span id="titulo-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="artista">Artista</label>
+                <input type="text" id="artista" name="artista" required>
+                <span id="artista-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+                <span id="descripcion-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="video_url">URL del Video (YouTube, Vimeo, etc.)</label>
+                <input type="text" id="video_url" name="video_url">
+                <span id="video_url-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nivel</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="">Seleccionar nivel</option>
+                    <option value="principiante">Principiante</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+                <span id="nivel-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="tablatura">Tablatura (PDF, JPG, PNG)</label>
+                <input type="file" id="tablatura" name="tablatura" accept=".pdf,.jpg,.jpeg,.png">
+                <span id="tablatura-error" class="error-message"></span>
+                <div id="tablatura-preview" class="file-preview"></div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Guardar canción</button>
+                <a href="../admin-panel.html" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <!-- Aquí va tu footer -->
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="../img/logo.png" alt="Guitar Master Logo">
+        </div>
+        <div class="footer-admin">
+            <p>Panel de administración - Guitar Master</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Guitar Master. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/admin-cancion.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Acordes Básicos - GuitarMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/acordes-basicos-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i data-lucide="guitar"></i>
+                    <span>GuitarMaster</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="lecciones.html">Lecciones</a></li>
+                    <li><a href="ejercicios.html">Ejercicios</a></li>
+                    <li><a href="canciones.html">Canciones</a></li>
+                    <li><a href="comenzar.html">Comenzar</a></li>
+                </ul>
+                <button class="user-button">
+                    <i data-lucide="user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="acordes-hero">
+            <div class="container">
+                <h1>Guía de Acordes Básicos</h1>
+                <p>Aprende los acordes fundamentales para empezar a tocar tus canciones favoritas.</p>
+            </div>
+        </section>
+
+        <section class="acordes-content">
+            <div class="container">
+                <div class="acordes-grid">
+                    <div class="acordes-list">
+                        <h2>Acordes Mayores</h2>
+                        <div class="acorde-item" data-acorde="A">
+                            <h3>A (La Mayor)</h3>
+                            <div class="acorde-diagram"></div>
+                        </div>
+                        <div class="acorde-item" data-acorde="D">
+                            <h3>D (Re Mayor)</h3>
+                            <div class="acorde-diagram"></div>
+                        </div>
+                        <div class="acorde-item" data-acorde="G">
+                            <h3>G (Sol Mayor)</h3>
+                            <div class="acorde-diagram"></div>
+                        </div>
+                        <h2>Acordes Menores</h2>
+                        <div class="acorde-item" data-acorde="Am">
+                            <h3>Am (La menor)</h3>
+                            <div class="acorde-diagram"></div>
+                        </div>
+                        <div class="acorde-item" data-acorde="Em">
+                            <h3>Em (Mi menor)</h3>
+                            <div class="acorde-diagram"></div>
+                        </div>
+                    </div>
+                    <div class="acorde-detail">
+                        <h2>Detalles del Acorde</h2>
+                        <div id="acorde-info">
+                            <p>Selecciona un acorde para ver más detalles.</p>
+                        </div>
+                        <div id="acorde-audio">
+                            <!-- El audio se insertará aquí mediante JavaScript -->
+                        </div>
+                        <div id="acorde-tips">
+                            <!-- Los consejos se insertarán aquí mediante JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="practica-section">
+                    <h2>Práctica de Acordes</h2>
+                    <p>Intenta cambiar entre estos acordes. Comienza lento y aumenta la velocidad gradualmente.</p>
+                    <div class="practica-acordes">
+                        <button class="btn btn-primary" id="start-practice">Iniciar Práctica</button>
+                        <div id="practice-display" class="hidden">
+                            <h3>Cambia al acorde:</h3>
+                            <div id="current-chord">-</div>
+                            <div id="next-chord">Siguiente: -</div>
+                            <div id="timer">Tiempo: 0s</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i data-lucide="guitar"></i>
+                        <span>Guitar Master</span>
+                    </a>
+                    <p>Aprende a tocar guitarra de manera fácil y divertida con nuestras lecciones interactivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="lecciones.html">Lecciones</a></li>
+                        <li><a href="ejercicios.html">Ejercicios</a></li>
+                        <li><a href="canciones.html">Canciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Guitar Master. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/acordes-basicos-script.js"></script>
+</body>
+</html>

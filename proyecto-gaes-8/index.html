@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitar Master - Aprende a tocar guitarra</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/validacion-styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Estilos adicionales para la página de inicio */
+    .hero-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/placeholder.svg?height=800&width=1200');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .features-section {
+      padding: 4rem 2rem;
+      background-color: #f8f9fa;
+    }
+    
+    .features-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-description {
+      color: #666;
+    }
+    
+    .cta-section {
+      background-color: #e74c3c;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+    
+    .btn-primary {
+      background-color: #e74c3c;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #c0392b;
+    }
+    
+    .btn-secondary {
+      background-color: white;
+      color: #e74c3c;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-outline:hover {
+      background-color: white;
+      color: #e74c3c;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 4px;
+    }
+    
+    .dropdown-menu.active {
+      display: block;
+    }
+    
+    .dropdown-menu li {
+      display: block;
+    }
+    
+    .dropdown-menu a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: #f1f1f1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="#" class="logo">
+        <i data-lucide="guitar"></i>
+        <span>GuitarMaster</span>
+    </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="lecciones.html">Lecciones</a></li>
+        <li><a href="ejercicios.html">Ejercicios</a></li>
+        <li><a href="canciones.html">Canciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        
+        <!-- Menú para usuarios no autenticados -->
+        <li class="user-menu" id="guest-menu">
+          <a href="login.html">Iniciar sesión</a>
+          <a href="registro.html">Registrarse</a>
+        </li>
+        
+        <!-- Menú para usuarios autenticados -->
+        <li class="user-menu" id="user-menu" style="display: none;">
+          <a href="#" id="user-dropdown" class="dropdown-trigger">Mi cuenta</a>
+          <ul class="dropdown-menu">
+            <li><a href="perfil.html">Mi perfil</a></li>
+            <li><a href="editar-perfil.html">Editar perfil</a></li>
+            <li><a href="cambiar-password.html">Cambiar contraseña</a></li>
+            <li><a href="logout.php">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        
+        <!-- Menú para administradores -->
+        <li class="admin-menu" id="admin-menu" style="display: none;">
+          <a href="admin-panel.html">Panel de administración</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1 class="hero-title">Aprende a tocar guitarra con Guitar Master</h1>
+      <p class="hero-subtitle">Lecciones, ejercicios y canciones para todos los niveles</p>
+      <div class="hero-buttons">
+        <a href="lecciones.html" class="btn btn-primary">Ver lecciones</a>
+        <a href="registro.html" class="btn btn-outline" id="registro-btn">Registrarse gratis</a>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2 class="features-title">¿Por qué elegir Guitar Master?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="book-open"></i>
+          </div>
+          <h3 class="feature-title">Lecciones estructuradas</h3>
+          <p class="feature-description">Aprende con nuestras lecciones organizadas por nivel y categoría, desde lo más básico hasta técnicas avanzadas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="music"></i>
+          </div>
+          <h3 class="feature-title">Ejercicios prácticos</h3>
+          <p class="feature-description">Mejora tu técnica con ejercicios diseñados para desarrollar tu habilidad y velocidad en la guitarra.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="play"></i>
+          </div>
+          <h3 class="feature-title">Canciones populares</h3>
+          <p class="feature-description">Aprende a tocar tus canciones favoritas con nuestras tablaturas y videos explicativos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2 class="cta-title">¿Listo para comenzar tu viaje musical?</h2>
+      <p class="cta-description">Únete a nuestra comunidad de guitarristas y comienza a aprender hoy mismo. Regístrate gratis y accede a todo nuestro contenido.</p>
+      <a href="registro.html" class="btn btn-secondary" id="registro-btn-2">Registrarse ahora</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <i data-lucide="guitar"></i>
+        <span>Guitar Master</span>
+      </div>
+      <div class="footer-links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="lecciones.html">Lecciones</a></li>
+          <li><a href="ejercicios.html">Ejercicios</a></li>
+          <li><a href="canciones.html">Canciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i data-lucide="facebook"></i></a>
+          <a href="#"><i data-lucide="instagram"></i></a>
+          <a href="#"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Guitar Master. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/logout.js"></script>
+  <script>
+    // Script específico para la página de inicio
+    document.addEventListener("DOMContentLoaded", () => {
+      // Ocultar botones de registro si el usuario ya está autenticado
+      const usuarioId = sessionStorage.getItem("usuario_id");
+      const registroBtns = document.querySelectorAll("#registro-btn, #registro-btn-2");
+      
+      if (usuarioId) {
+        registroBtns.forEach(btn => {
+          btn.style.display = "none";
+        });
+      }
+      
+      // Inicializar iconos de Lucide
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
+

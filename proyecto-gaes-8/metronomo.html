@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrónomo - GuitarMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/metronomo-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i data-lucide="guitar"></i>
+                    <span>GuitarMaster</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="lecciones.html">Lecciones</a></li>
+                    <li><a href="ejercicios.html">Ejercicios</a></li>
+                    <li><a href="canciones.html">Canciones</a></li>
+                    <li><a href="metronomo.html" class="active">Herramientas</a></li>
+                </ul>
+                <button class="user-button">
+                    <i data-lucide="user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="metronome-hero">
+            <div class="container">
+                <h1>Metrónomo</h1>
+                <p>Practica con precisión y mejora tu sentido del ritmo</p>
+            </div>
+        </section>
+
+        <section class="metronome-content">
+            <div class="container">
+                <div class="metronome-wrapper">
+                    <div class="metronome">
+                        <div class="bpm-display">
+                            <span id="bpm-value">120</span>
+                            <span class="bpm-text">BPM</span>
+                        </div>
+                        <div class="metronome-controls">
+                            <button id="decrease-tempo" class="tempo-btn" aria-label="Disminuir tempo">
+                                <i data-lucide="minus"></i>
+                            </button>
+                            <input type="range" min="40" max="220" value="120" class="slider" id="bpm-slider">
+                            <button id="increase-tempo" class="tempo-btn" aria-label="Aumentar tempo">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                        <button id="start-stop" class="start-stop-btn">
+                            <i data-lucide="play" id="play-icon"></i>
+                            <span id="start-stop-text">Iniciar</span>
+                        </button>
+                        <div class="time-signature">
+                            <button id="decrease-beats" class="beats-btn" aria-label="Disminuir pulsos por compás">
+                                <i data-lucide="minus"></i>
+                            </button>
+                            <span id="beats-per-measure">4</span>
+                            <button id="increase-beats" class="beats-btn" aria-label="Aumentar pulsos por compás">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="metronome-tips">
+            <div class="container">
+                <h2>Consejos para practicar con metrónomo</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i data-lucide="clock"></i>
+                        <h3>Comienza lento</h3>
+                        <p>Inicia con un tempo cómodo y aumenta gradualmente la velocidad.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i data-lucide="repeat"></i>
+                        <h3>Practica regularmente</h3>
+                        <p>Usa el metrónomo en cada sesión de práctica para mejorar tu precisión rítmica.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i data-lucide="ear"></i>
+                        <h3>Escucha atentamente</h3>
+                        <p>Concéntrate en sincronizar tu interpretación con cada pulso del metrónomo.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i data-lucide="activity"></i>
+                        <h3>Varía el tempo</h3>
+                        <p>Practica la misma pieza a diferentes velocidades para mejorar tu flexibilidad rítmica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i data-lucide="guitar"></i>
+                        <span>Guitar Master</span>
+                    </a>
+                    <p>Aprende a tocar guitarra de manera fácil y divertida con nuestras lecciones interactivas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="lecciones.html">Lecciones</a></li>
+                        <li><a href="ejercicios.html">Ejercicios</a></li>
+                        <li><a href="canciones.html">Canciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Guitar Master. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/metronomo-script.js"></script>
+</body>
+</html>
+
